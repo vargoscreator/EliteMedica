@@ -364,3 +364,21 @@ if(document.querySelector('.timeline__button')){
         button.style.display = 'none';
     });
 }
+
+// up
+const upElement = document.querySelector('.up');
+if (upElement) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+            upElement.classList.add('show');
+        } else {
+            upElement.classList.remove('show');
+        }
+    })
+    upElement.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}

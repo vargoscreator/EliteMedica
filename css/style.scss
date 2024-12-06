@@ -3374,7 +3374,7 @@ h3,
 
 
 // clients
-.clients{
+.clientslogo{
     &__wrapper{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
@@ -3880,4 +3880,26 @@ h3,
             border-bottom: 2px solid #D9D9D9;
         }
     }
+}
+
+
+// up
+.up{
+    position: fixed;
+    bottom: 30px;
+    left: 63px;
+    @include viewport-phone {
+        bottom: 20px;
+        left: 20px;
+    }
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .2s ease;
+}
+.up.show{
+    opacity: 1;
+    pointer-events: all;
 }

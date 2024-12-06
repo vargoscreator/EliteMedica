@@ -3936,7 +3936,7 @@ html:not(.v-mobile) .footer__menu a:focus-visible {
   text-decoration: none;
 }
 
-.clients__wrapper {
+.clientslogo__wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 65px 1fr 65px 1fr 65px 1fr 65px 1fr 65px 1fr;
@@ -3944,25 +3944,25 @@ html:not(.v-mobile) .footer__menu a:focus-visible {
   gap: 70px 65px;
 }
 @media (min-width: 900px) and (max-width: 1199px) {
-  .clients__wrapper {
+  .clientslogo__wrapper {
     -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (min-width: 900px) {
-  .clients__wrapper {
+  .clientslogo__wrapper {
     -ms-grid-columns: (1fr)[4];
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (max-width: 899px) {
-  .clients__wrapper {
+  .clientslogo__wrapper {
     -ms-grid-columns: 1fr 40px 1fr;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
   }
 }
-.clients__logo {
+.clientslogo__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3974,11 +3974,11 @@ html:not(.v-mobile) .footer__menu a:focus-visible {
           justify-content: center;
   width: 100%;
 }
-.clients__logo:hover img {
+.clientslogo__logo:hover img {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-.clients__logo img {
+.clientslogo__logo img {
   width: 100%;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
@@ -3987,7 +3987,7 @@ html:not(.v-mobile) .footer__menu a:focus-visible {
   transition: all 0.5s ease;
 }
 @media (max-width: 899px) {
-  .clients__logo img {
+  .clientslogo__logo img {
     width: 80%;
   }
 }
@@ -4578,4 +4578,32 @@ html:not(.v-mobile) .footer__menu a:focus-visible {
   .procedure__item-content h3 {
     font-size: 24px;
   }
+}
+
+.up {
+  position: fixed;
+  bottom: 30px;
+  left: 63px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+@media (max-width: 899px) {
+  .up {
+    bottom: 20px;
+    left: 20px;
+  }
+}
+
+.up.show {
+  opacity: 1;
+  pointer-events: all;
 }
