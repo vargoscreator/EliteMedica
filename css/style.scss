@@ -1360,7 +1360,12 @@ h3,
         &-aricle{
             max-width: 590px;
         }
-
+        &-long{
+            max-width: 725px;
+            .banner__text{
+                max-width: 460px;
+            }
+        }
 
         @include viewport-phone {
             width: 220px;
@@ -3811,5 +3816,68 @@ h3,
             }
         }
           
+    }
+}
+
+
+// procedure
+.procedure{
+    &__wrapper{
+        padding: 0 90px;
+        @include viewport-phone {
+            padding: 0;
+        }
+    }
+    h2{
+        text-align: center;
+    }
+    &__block{
+        counter-reset: block-counter;
+        width: 100%;
+        max-width: 793px;
+        margin: 64px auto 0;
+        @include viewport-phone {
+            margin-top: 40px;
+        }
+    }
+    &__item{
+        counter-increment: block-counter;
+        display: flex;
+        align-items: start;
+        gap: 32px;
+        margin-bottom: 35px;
+        @include viewport-phone {
+            gap: 20px;
+        }
+        &::before{
+            position: relative;
+            content: counter(block-counter);
+            color: var(--color-green);
+            font-family: $font-family;
+            font-size: 180px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 110%;
+            top: -40px;
+            @include viewport-phone {
+                font-size: 75px;
+                top: -20px;
+            }
+        }
+        &-content{
+            h3{
+                margin-bottom: 10px;
+                color: var(--color-grey-100);
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 110%; /* 44px */
+                @include viewport-phone {
+                    font-size: 24px;
+                }
+            }
+            padding-bottom: 35px;
+            border-bottom: 2px solid #D9D9D9;
+        }
     }
 }

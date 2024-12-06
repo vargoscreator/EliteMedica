@@ -1489,6 +1489,12 @@ html:not(.v-mobile) .header .menu-socials__list a:focus-visible {
 .banner__info-aricle {
   max-width: 590px;
 }
+.banner__info-long {
+  max-width: 725px;
+}
+.banner__info-long .banner__text {
+  max-width: 460px;
+}
 @media (max-width: 899px) {
   .banner__info {
     width: 220px;
@@ -4499,4 +4505,77 @@ html:not(.v-mobile) .footer__menu a:focus-visible {
   inset: 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(253, 240, 240, 0.35)), to(rgba(253, 240, 240, 0.7)));
   background: linear-gradient(180deg, rgba(253, 240, 240, 0.35) 0%, rgba(253, 240, 240, 0.7) 100%);
+}
+
+.procedure__wrapper {
+  padding: 0 90px;
+}
+@media (max-width: 899px) {
+  .procedure__wrapper {
+    padding: 0;
+  }
+}
+.procedure h2 {
+  text-align: center;
+}
+.procedure__block {
+  counter-reset: block-counter;
+  width: 100%;
+  max-width: 793px;
+  margin: 64px auto 0;
+}
+@media (max-width: 899px) {
+  .procedure__block {
+    margin-top: 40px;
+  }
+}
+.procedure__item {
+  counter-increment: block-counter;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 32px;
+  margin-bottom: 35px;
+}
+@media (max-width: 899px) {
+  .procedure__item {
+    gap: 20px;
+  }
+}
+.procedure__item::before {
+  position: relative;
+  content: counter(block-counter);
+  color: var(--color-green);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 180px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  top: -40px;
+}
+@media (max-width: 899px) {
+  .procedure__item::before {
+    font-size: 75px;
+    top: -20px;
+  }
+}
+.procedure__item-content {
+  padding-bottom: 35px;
+  border-bottom: 2px solid #D9D9D9;
+}
+.procedure__item-content h3 {
+  margin-bottom: 10px;
+  color: var(--color-grey-100);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 44px */
+}
+@media (max-width: 899px) {
+  .procedure__item-content h3 {
+    font-size: 24px;
+  }
 }
