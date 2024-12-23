@@ -2706,6 +2706,12 @@ html:not(.v-mobile) .footer__menu a:focus-visible {
       -ms-flex-align: center;
           align-items: center;
   gap: 34px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 104.019%; /* 24.965px */
+  letter-spacing: -0.48px;
+  text-wrap: nowrap;
 }
 @media (max-width: 899px) {
   .filterBlock__name {
@@ -2867,6 +2873,69 @@ html:not(.v-mobile) .footer__menu a:focus-visible {
   margin-top: 21px;
   padding-top: 14px;
   border-top: 1px solid var(--color-white);
+}
+.filterBlock__form-checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  cursor: pointer;
+}
+.filterBlock__form-checkbox input {
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.filterBlock__form-checkbox input:checked + span::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='37' height='37' viewBox='0 0 37 37' fill='none'%3E%3Crect x='36.2288' y='36.7032' width='35.8499' height='35.8499' transform='rotate(-180 36.2288 36.7032)' fill='%23E30D6E'/%3E%3Cpath d='M10.1661 19.6705L12.8762 16.7716L17.8008 21.3756L27.2356 10.4461L30.2058 13.2228L20.771 24.1524L18.0609 27.0513L15.0907 24.2745L10.1661 19.6705Z' fill='white'/%3E%3C/svg%3E");
+}
+.filterBlock__form-checkbox span {
+  padding-right: 60px;
+  color: var(--color-black);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 104.019%;
+  letter-spacing: -0.48px;
+}
+@media (max-width: 899px) {
+  .filterBlock__form-checkbox span {
+    font-size: 16px;
+    padding-right: 40px;
+    text-wrap: nowrap;
+  }
+}
+.filterBlock__form-checkbox span::after {
+  content: "";
+  position: absolute;
+  width: 35.85px;
+  height: 35.85px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='37' height='37' viewBox='0 0 37 37' fill='none'%3E%3Crect x='36.0787' y='36.7032' width='35.8499' height='35.8499' transform='rotate(-180 36.0787 36.7032)' fill='white'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media (max-width: 899px) {
+  .filterBlock__form-checkbox span::after {
+    width: 25px;
+    height: 25px;
+  }
 }
 .filterBlock-result {
   padding: 17px 0 20px;
