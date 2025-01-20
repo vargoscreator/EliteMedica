@@ -3695,6 +3695,7 @@ html:not(.v-mobile) .footer__menu a:focus-visible {
   }
 }
 .aprobationBlock__block {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3702,10 +3703,23 @@ html:not(.v-mobile) .footer__menu a:focus-visible {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 .aprobationBlock__block-image {
   margin-top: 51px;
   margin-bottom: 35px;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 400px;
+  width: 100%;
+}
+.aprobationBlock__block-image > button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3715,15 +3729,31 @@ html:not(.v-mobile) .footer__menu a:focus-visible {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
-  height: 400px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 10;
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
-@media (max-width: 899px) {
-  .aprobationBlock__block-image {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 300px;
-  }
+.aprobationBlock__block-image > button.aprobationBlock-slider--prev {
+  left: 20px;
+}
+.aprobationBlock__block-image > button.aprobationBlock-slider--next {
+  right: 20px;
+}
+.aprobationBlock__block-image .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .aprobationBlock__block-image img {
   width: 100%;
@@ -3738,6 +3768,13 @@ html:not(.v-mobile) .footer__menu a:focus-visible {
 .aprobationBlock__block-image img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+@media (max-width: 899px) {
+  .aprobationBlock__block-image {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 300px;
+  }
 }
 .aprobationBlock__block-bottom {
   display: -webkit-box;

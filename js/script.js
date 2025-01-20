@@ -382,3 +382,17 @@ if (upElement) {
         });
     });
 }
+
+const sliders = document.querySelectorAll(".aprobationBlock-slider");
+if (sliders.length > 0) {
+    sliders.forEach((slider) => {
+        const swiper = new Swiper(slider, {
+            slidesPerView: 1,
+            navigation: {
+                nextEl: slider.querySelector(".aprobationBlock-slider--next"),
+                prevEl: slider.querySelector(".aprobationBlock-slider--prev"),
+            },
+            loop: true,
+        });
+    });
+}
